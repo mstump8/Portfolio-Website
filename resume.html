@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <title>Morgan's Portfolio</title>
+        
+        <script src="store.js" async></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/1.1.0/rivets-cart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="style.css" />-->
+
+        <style>
+          body {
+            background-image: url("orange8.webp");
+            background-size: cover;
+            font-family: fantasy;
+            max-width: 100%;
+            max-height: 100%;
+          }
+          #topnav {
+            font-family: fantasy;
+            background-color: rgb(215, 213, 213);
+          }
+          #navbar {
+            font-size: 20pt;
+          }
+         .store-item-image {
+            width: 15vw;
+            height: 15vw;
+         }
+         .clock {
+            color: black;
+            font-size: 3vw;
+            margin-left: 25pt;
+            font-family: fantasy;
+          }
+          .store-name {
+            font-size: 2vw;
+          }
+          .cart-row {
+            display: flex;
+          }
+          .cart-item {
+            width: 45%;
+          }
+          .cart-price {
+             width: 20%;
+             font-size: 1.2em;
+            color: #333;
+          }
+
+          .cart-quantity {
+            width: 35%;
+          }
+        .cart-item-title {
+            color: #333;
+            margin-left: .5em;
+            font-size: 1.2em;
+          }
+
+        .cart-item-image {
+            width: 75px;
+            height: auto;
+            border-radius: 10px;
+          }
+        .cart-row:last-child {
+            border-bottom: 1px solid black;
+          }
+
+        .cart-row:last-child .cart-column {
+            border: none;
+          }
+
+        .cart-total {
+            text-align: end;
+            margin-top: 10px;
+            margin-right: 10px;
+          }
+
+        .cart-total-title {
+           font-weight: bold;
+           font-size: 1.5em;
+          color: black;
+          margin-right: 20px;
+        }
+
+        .cart-total-price {
+          color: #333;
+          font-size: 1.1em;
+        }
+        .section-header {
+          align-items: center;
+          justify-content: center;
+        }
+        .main-footer {
+          color: black;
+          padding: .25em 0;
+        }
+
+        .main-footer-container {
+          display: flex;
+          align-items: center;
+        }
+
+        .main-footer-container ul {
+          flex-grow: 1;
+          text-align: end;
+        }
+
+</style>
+</head>
+<body>
+<nav id="topnav" class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" style="font-size: 30pt;"href="#">Morgan's Portfolio</a>
+  </div>
+  <ul id="navbar" class="nav navbar-nav">
+    <li><a href="main1.html">Home</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="contactme.html">Contact Me</a></li>
+    <li class="active"><a href="resume.html">My Store</a></li>
+    <li><a href="work.html">My Work</a></li>
+  </ul>
+</div>
+</nav>
+<header style="font-size: 3vw;">
+<p style="text-align: center;">Store Page</p>
+<div class="clock"></div>
+</header>
+<script>
+function displayTime() {
+let date = new Date();
+let time = date.toLocaleTimeString();
+document.querySelector('.clock').textContent = time; 
+}
+displayTime();
+const createClock = setInterval(displayTime, 1000);
+</script>
+<h1 class="store-name" >Morgan's Pen Store</h1>
+</header>
+<section class="container content-section">
+    <h2 style="text-align: left; font-size: 4vw;"class="section-header">ERASABLE PENS FOR STUDENTS</h2>
+    <div class="shop-items">
+        <div id="shop=item1" class="shop-item">
+            <p></p>
+            <p style="text-align: left; font-size: 2vw;" class="shop-item-title">Black Frixon Pens (3 pack)</p>
+            <img style="width: 15vw; height: 15vw;" class="shop-item-image"  src="blackfrixon.png" alt="Black Frixon Pens (3 pack)">
+            <div class="shop-item-details">
+                <p></p>
+                <span style="align-items: center; font-size: 2vw;" class="shop-item-price">$4.88</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div id="shop=item1" class="shop-item">
+          <p></p>
+          <p style="text-align: left; font-size: 2vw;" class="shop-item-title">Navy Frixon Pens (3 pack)</p>
+          <img style="width: 15vw; height: 15vw;" class="shop-item-image"  src="navyfrixon.png" alt="Navy Frixon Pens (3 pack)">
+          <div class="shop-item-details">
+              <p></p>
+              <span style="font-size: 2vw;" class="shop-item-price">$9.93</span>
+              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+          </div>
+      </div>
+      <div id="shop=item2" class="shop-item">
+          <p></p>
+          <p style="text-align: left; font-size: 2vw;" class="shop-item-title">Multi-Color Frixon Pens (8 pack)</p>
+          <img style="width: 15vw; height: 15vw;" class="shop-item-image" src="multifrixon.png" alt="Multi-Color Frixon Pens (8 pack)">
+          <div class="shop-item-details">
+              <p></p>
+              <span style="font-size: 2vw;" class="shop-item-price">$12.69</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+      </div>
+      <div id="shop=item2" class="shop-item">
+          <p></p>
+          <p style="text-align: left; font-size: 2vw;" class="shop-item-title">Multi-Color Frixon Pens (15 pack)</p>
+          <img style="width: 15vw; height: 15vw;"class="shop-item-image"  src="15frixon.png" alt="Multi-Color Frixon Pens (15 pack)">
+          <div class="shop-item-details">
+              <p></p>
+              <span style="font-size: 2vw;"class="shop-item-price">$19.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="container content-section">
+  <h1 class="section-header">CART</h2>
+  <div class="cart-row">
+      <span style="font-size: 2vw;" class="cart-item cart-header cart-column">ITEM</span>
+      <span style="font-size: 2vw;" class="cart-price cart-header cart-column">PRICE</span>
+      <span style= "font-size: 2vw;"class="cart-quantity cart-header cart-column">QUANTITY</span>
+  </div>
+  <div class="cart-items">
+  </div>
+  <div class="cart-total">
+      <strong style="font-size: 2vw;"class="cart-total-title">Total</strong>
+      <span style="font-size: 2vw;" class="cart-total-price">$0</span>
+  </div>
+  <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+<div id="printdetails">
+    <p class="details" type="button"></p>
+    <p class="information"></p>
+            </div>
+        </section>
+        <footer class="main-footer">
+          <div class="container main-footer-container">
+              <ul style="text-align: center; justify-content: center;" id="things"class="nav footer-nav">
+                  <li  style="font-size: 2.5vw;">
+                      <a class="fa fa-github" href="https://github.com/mstump8/"></a>
+                  </li>
+                  <li style="font-size: 2.5vw;">
+                      <a class="fa fa-linkedin-square"href="https://www.linkedin.com/in/morgan-stump-40b897218"></a>
+                  </li>
+                  <li style="font-size: 2.5vw;">
+                      <a class="fa fa-envelope" href="mailto:morganstump14@gmail.com"></a>
+                  </li> 
+              </ul>
+          </div>
+        </footer>
+    </body>
+ </html>
